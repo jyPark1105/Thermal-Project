@@ -1,0 +1,31 @@
+lr0: 0.0001  # initial learning rate (SGD=1E-2, Adam=1E-3)                            # changed
+lrf: 0.01  # final OneCycleLR learning rate (lr0 * lrf)                               # changed
+momentum: 0.937  # SGD momentum/Adam beta1                                           # unchanged
+weight_decay: 0.0005  # optimizer weight decay 5e-4                                  # unchanged
+warmup_epochs: 3.0  # warmup epochs (fractions ok)                                   # unchanged
+warmup_momentum: 0.8  # warmup initial momentum                                      # unchanged
+warmup_bias_lr: 0.01  # warmup initial bias lr                                       # changed
+box: 0.05  # box loss gain                                                           # unchanged
+cls: 0.5  # cls loss gain                                                            # unchanged
+cls_pw: 1.0  # cls BCELoss positive_weight                                           # unchanged
+obj: 1.0  # obj loss gain (scale with pixels)                                        # unchanged
+obj_pw: 1.0  # obj BCELoss positive_weight                                           # unchanged
+iou_t: 0.35  # IoU training threshold                                                # changed
+anchor_t: 4.0  # anchor-multiple threshold                                           # unchanged
+# anchors: 3  # anchors per output layer (0 to ignore)
+fl_gamma: 0.0  # focal loss gamma (efficientDet default gamma=1.5)                   # unchanged
+hsv_h: 0.015  # image HSV-Hue augmentation (fraction)                                # unchanged
+hsv_s: 0.7  # image HSV-Saturation augmentation (fraction)                           # unchanged
+hsv_v: 0.4  # image HSV-Value augmentation (fraction)                                # unchanged
+degrees: 0.0  # image rotation (+/- deg)                                             # unchanged
+translate: 0.2  # image translation (+/- fraction)                                   # changed
+scale: 0.2  # image scale (+/- gain)                                                 # changed
+shear: 0.0  # image shear (+/- deg)                                                  # unchanged
+perspective: 0.0  # image perspective (+/- fraction), range 0-0.001                  # unchanged
+flipud: 0.0  # image flip up-down (probability)                                      # unchanged
+fliplr: 0.5  # image flip left-right (probability)                                   # unchanged
+mosaic: 1.0  # image mosaic (probability)                                            # unchanged
+mixup: 0.05  # image mixup (probability)                                             # unchanged
+copy_paste: 0.0  # image copy paste (probability)                                    # unchanged
+paste_in: 0.05  # image copy paste (probability), use 0 for faster training          # unchanged
+loss_ota: 1  # use ComputeLossOTA, use 0 for faster training                         # unchanged
